@@ -1,7 +1,7 @@
 const Product = ({ productId }) => {
   return (
     <>
-      <h1>{`This is my product id ${productId}`}</h1>{" "}
+      <h1>{`bestil låsesmed til ${productId}`}</h1>{" "}
     </>
   );
 };

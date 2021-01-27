@@ -8,15 +8,15 @@ const Meta = ({ title, keywords, description }) => {
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
       <link rel="icon" href="/favicon.ico" />
-      <title>startside</title>
+      <title>{`PB Låsesmed ${title}`}</title>
     </Head>
   );
 };
 
 Meta.defaultProps = {
-  title: "Startside",
-  keywords: "web development, programming",
-  description: "Get the latest news in web dev",
+  title: "",
+  keywords: "Låsesmed Låseservice",
+  description: "BILLIG LÅSESMED | Låseservice døgnvagt",
 };
 
 export default Meta;

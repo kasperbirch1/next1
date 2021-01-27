@@ -1,16 +1,17 @@
-import headerStyles from '../styles/Header.module.css'
+import headerStyles from "../styles/Header.module.css";
 
 const Header = () => {
   return (
-    <div>
+    <header>
       <h1 className={headerStyles.title}>
-        <span>WebDev</span> News
+        <span>PB</span> Låsesmed
       </h1>
       <p className={headerStyles.description}>
-        Keep up to date with the latest web dev news
+        Vi leverer altid professionel låseservice <br />
+        Hurtigt, sikkert og trygt
       </p>
-    </div>
-  )
-}
+    </header>
+  );
+};
 
-export default Header
+export default Header;

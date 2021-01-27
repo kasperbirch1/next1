@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <h1>Velkommen forside</h1>
+      <h1>Velkommen til forsiden</h1>
     </>
   );
 }

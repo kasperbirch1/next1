@@ -1,8 +1,10 @@
 import headerStyles from "../styles/Header.module.css";
+import Nav from "./Nav";
 
 const Header = () => {
   return (
     <header>
+      <Nav />
       <h1 className={headerStyles.title}>
         <span>PB</span> Låsesmed
       </h1>

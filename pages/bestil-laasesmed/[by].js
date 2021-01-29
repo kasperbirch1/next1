@@ -4,7 +4,7 @@ const Product = ({ byNavn }) => {
   return (
     <>
       <Meta title={`| Bestil låsesmed til ${byNavn}`} />
-      <h1>{`Bestil en låsesmed til ${byNavn}`}</h1>{" "}
+      <h1>{`Bestil en låsesmed til ${byNavn}`}</h1>
     </>
   );
 };

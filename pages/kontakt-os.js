@@ -1,3 +1,4 @@
+import ContactForm from "../components/ContactForm";
 import Meta from "../layout/Meta";
 
 const KontaktOs = () => {
@@ -5,6 +6,7 @@ const KontaktOs = () => {
     <>
       <Meta title="| Kontakt os" />
       <h1>Kontakt os</h1>
+      <ContactForm />
     </>
   );
 };

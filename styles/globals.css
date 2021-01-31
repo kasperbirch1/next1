@@ -19,3 +19,11 @@ a {
   margin: 0 auto;
   max-width: 600px;
 }
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.flickity-viewport {
+  overflow: hidden;
+}

@@ -1,55 +1,25 @@
-import Swiper from "react-id-swiper";
-import headerStyles from "../../styles/Header.module.css";
+import Flickity from "react-flickity-component";
+import HeroSliderItem from "./HeroSliderItem";
+
+const flickityOptions = {
+  autoPlay: 4000,
+};
 
 const HeroSlider = () => {
-  const params = {
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  };
   return (
     <>
-      <Swiper {...params}>
-        <div>
-          <h1 className={headerStyles.title}>
-            <span>PB</span> Låsesmed
-          </h1>
-          <p className={headerStyles.description}>
-            Vi leverer altid professionel låseservice <br />
-            Hurtigt, sikkert og trygt
-          </p>
-        </div>
-        <div>
-          <h1 className={headerStyles.title}>
-            <span>PB</span> Låsesmed
-          </h1>
-          <p className={headerStyles.description}>
-            Vi leverer altid professionel låseservice <br />
-            Hurtigt, sikkert og trygt
-          </p>
-        </div>
-        <div>
-          <h1 className={headerStyles.title}>
-            <span>PB</span> Låsesmed
-          </h1>
-          <p className={headerStyles.description}>
-            Vi leverer altid professionel låseservice <br />
-            Hurtigt, sikkert og trygt
-          </p>
-        </div>
-      </Swiper>
-
-      <style jsx>{`
-        .swiper-slide {
-          //   height: 20rem;
-        }
-      `}</style>
+      <Flickity elementType={"section"} options={flickityOptions}>
+        <HeroSliderItem
+          description1="Vi leverer altid professionel låseservice"
+          description2="Hurtigt, sikkert og trygt"
+          backgroundImage="https://d2bgjx2gb489de.cloudfront.net/gbb-blogs/wp-content/uploads/2020/02/14125552/Copenhagen-wide-angle.jpg"
+        />
+        <HeroSliderItem
+          description1="Vi leverer altid professionel låseservice"
+          description2="Hurtigt, sikkert og trygt"
+          backgroundImage="https://images.unsplash.com/photo-1590587181460-58b27c558712?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+        />
+      </Flickity>
     </>
   );
 };

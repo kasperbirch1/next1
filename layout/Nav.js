@@ -21,7 +21,11 @@ const Nav = () => {
         </li>
         <li>
           <a href="tel:31313515">
-            <Button variant="contained" startIcon={<PhoneIcon />}>
+            <Button
+              variant="contained"
+              startIcon={<PhoneIcon />}
+              style={{ backgroundColor: "#0070f3", color: "white" }}
+            >
               31 31 35 15
             </Button>
           </a>

@@ -2,6 +2,8 @@ import Link from "next/link";
 import navStyles from "../styles/Nav.module.css";
 import PhoneIcon from "@material-ui/icons/Phone";
 import { Button } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core/styles";
+import { theme } from "../styles/materialUiTheme";
 
 const Nav = () => {
   return (
@@ -21,13 +23,15 @@ const Nav = () => {
         </li>
         <li>
           <a href="tel:31313515">
-            <Button
-              variant="contained"
-              startIcon={<PhoneIcon />}
-              style={{ backgroundColor: "#0070f3", color: "white" }}
-            >
-              31 31 35 15
-            </Button>
+            <ThemeProvider theme={theme}>
+              <Button
+                variant="contained"
+                startIcon={<PhoneIcon />}
+                color="primary"
+              >
+                31 31 35 15
+              </Button>
+            </ThemeProvider>
           </a>
         </li>
       </ul>

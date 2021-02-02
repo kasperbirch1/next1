@@ -3,6 +3,8 @@ import HeroSliderItem from "./HeroSliderItem";
 
 const flickityOptions = {
   autoPlay: 6000,
+  prevNextButtons: false,
+  pageDots: false,
 };
 
 const HeroSlider = () => {

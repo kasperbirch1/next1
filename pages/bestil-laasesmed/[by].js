@@ -3,6 +3,17 @@ import { siteInfo } from "../../siteInfo";
 import { Typography } from "@material-ui/core";
 
 const Product = ({ byNavn }) => {
+  console.log("byNavn", byNavn);
+  const extraCityInfo = [
+    { name: "græsted", extraSeo: "Her er der individuelt SEO om Græsted" },
+    { name: "gentofte", extraSeo: "Her er der individuelt SEO om Gentofte" },
+    { name: "københavn", extraSeo: "Her er der individuelt SEO om København" },
+  ];
+
+  const filterExtraCityInfo = extraCityInfo.filter(
+    (company) => company.name == byNavn.toLowerCase()
+  );
+
   return (
     <>
       <Meta title={`| Bestil låsesmed til ${byNavn}`} />
@@ -14,6 +25,14 @@ const Product = ({ byNavn }) => {
         variant="subtitle1"
         component="h2"
       >{`Står du akut og mangler du  en låsesmed i ${byNavn} ring på ${siteInfo.phone}`}</Typography>
+      {filterExtraCityInfo.length > 0 && (
+        <>
+          <pre>{JSON.stringify(filterExtraCityInfo, null, 2)}</pre>
+          <Typography style={{ color: "red" }}>
+            {filterExtraCityInfo[0].extraSeo}
+          </Typography>
+        </>
+      )}
       <Typography>
         Står du akut og har brug for en låsesmed, kan du ringe på{" "}
         <strong>{siteInfo.phone}</strong>, så kommer vi så hurtig vi kan til{" "}

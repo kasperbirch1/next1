@@ -14,17 +14,24 @@ const Product = ({ byNavn }) => {
     (company) => company.name == byNavn.toLowerCase()
   );
 
+  const CapitalizedFirstLetter = (name) => {
+    if (typeof name !== "string") return "";
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  };
+
   return (
     <>
-      <Meta title={`| Bestil låsesmed til ${byNavn}`} />
+      <Meta title={`| Bestil låsesmed til ${CapitalizedFirstLetter(byNavn)}`} />
       <Typography
         variant="h1"
         align="center"
-      >{`Bestil en låsesmed til ${byNavn}`}</Typography>
+      >{`Bestil en låsesmed til ${CapitalizedFirstLetter(byNavn)}`}</Typography>
       <Typography
         variant="subtitle1"
         component="h2"
-      >{`Står du akut og mangler du  en låsesmed i ${byNavn} ring på ${siteInfo.phone}`}</Typography>
+      >{`Står du akut og mangler du  en låsesmed i ${CapitalizedFirstLetter(
+        byNavn
+      )} ring på ${siteInfo.phone}`}</Typography>
       {filterExtraCityInfo.length > 0 && (
         <>
           <pre>{JSON.stringify(filterExtraCityInfo, null, 2)}</pre>
@@ -36,15 +43,15 @@ const Product = ({ byNavn }) => {
       <Typography>
         Står du akut og har brug for en låsesmed, kan du ringe på{" "}
         <strong>{siteInfo.phone}</strong>, så kommer vi så hurtig vi kan til{" "}
-        {byNavn}, og låser din dør op. Vi løser alle opgaver, lige fra defekt
-        nøgle og lås, til montering og omkodning, eller hvis simpelthen bare har
-        fået smækket dig ude.
+        {CapitalizedFirstLetter(byNavn)}, og låser din dør op. Vi løser alle
+        opgaver, lige fra defekt nøgle og lås, til montering og omkodning, eller
+        hvis simpelthen bare har fået smækket dig ude.
       </Typography>
       <Typography>
         Er uheldet sket, og du har smækket dig ude af din bil, eller er din lås
         eller nøgle gået i stykker. Ring blot til vores døgntelefon, så kommer
-        vi til dig - om det er på din adresse eller andre steder i {byNavn}{" "}
-        inden for 30 minutter.
+        vi til dig - om det er på din adresse eller andre steder i{" "}
+        {CapitalizedFirstLetter(byNavn)} inden for 30 minutter.
       </Typography>
       <Typography>
         PB Låsesmed yder altid en professionel service, og bruger kun godkendt

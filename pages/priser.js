@@ -13,7 +13,7 @@ const priser = () => {
     <>
       <Meta title="| Prisliste" />
       <Typography variant="h2">Prisliste</Typography>
-      <Table className="wrapper">
+      <Table>
         <TableHead>
           <TableRow>
             <TableCell style={{ fontWeight: "bold" }} align="left">

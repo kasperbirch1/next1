@@ -26,7 +26,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`wrapper ${styles.form}`}
+      className={styles.form}
       noValidate
       autoComplete="off"
     >

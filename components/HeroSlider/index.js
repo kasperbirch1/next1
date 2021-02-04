@@ -2,7 +2,7 @@ import Flickity from "react-flickity-component";
 import HeroSliderItem from "./HeroSliderItem";
 
 const flickityOptions = {
-  autoPlay: 6000,
+  autoPlay: 8000,
   prevNextButtons: false,
   pageDots: false,
 };

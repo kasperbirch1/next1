@@ -3,11 +3,24 @@ import { siteInfo } from "../../siteInfo";
 import { Typography } from "@material-ui/core";
 
 const Product = ({ byNavn }) => {
-  console.log("byNavn", byNavn);
+  console.log("🚀 ~ file: [by].js ~ line 6 ~ Product ~ byNavn", byNavn);
+
   const extraCityInfo = [
-    { name: "græsted", extraSeo: "Her er der individuelt SEO om Græsted" },
-    { name: "gentofte", extraSeo: "Her er der individuelt SEO om Gentofte" },
-    { name: "københavn", extraSeo: "Her er der individuelt SEO om København" },
+    {
+      name: "græsted",
+      extraSeo: "Her er der individuelt SEO om Græsted",
+      arrivalTime: 20,
+    },
+    {
+      name: "gentofte",
+      extraSeo: "Her er der individuelt SEO om Gentofte",
+      arrivalTime: 20,
+    },
+    {
+      name: "københavn",
+      extraSeo: "Her er der individuelt SEO om København",
+      arrivalTime: 20,
+    },
   ];
 
   const filterExtraCityInfo = extraCityInfo.filter(
@@ -32,14 +45,20 @@ const Product = ({ byNavn }) => {
       >{`Står du akut og mangler du  en låsesmed i ${CapitalizedFirstLetter(
         byNavn
       )} ring på ${siteInfo.phone}`}</Typography>
-      {filterExtraCityInfo.length > 0 && (
+
+      {filterExtraCityInfo.length > 0 ? (
         <>
           <pre>{JSON.stringify(filterExtraCityInfo, null, 2)}</pre>
           <Typography style={{ color: "red" }}>
             {filterExtraCityInfo[0].extraSeo}
           </Typography>
         </>
+      ) : (
+        <Typography style={{ color: "red" }}>
+          Vi laver kun bestillings arbejde i {CapitalizedFirstLetter(byNavn)}
+        </Typography>
       )}
+
       <Typography>
         Står du akut og har brug for en låsesmed, kan du ringe på{" "}
         <strong>{siteInfo.phone}</strong>, så kommer vi så hurtig vi kan til{" "}

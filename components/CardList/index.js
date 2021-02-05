@@ -1,6 +1,6 @@
 import React from "react";
 import CardItem from "./CardItem";
-import CardListStyles from "../../styles/CardList.module.css";
+import CardListStyles from "../../styles/Cardlist.module.css";
 // import { FaCar, FaHome, FaKey, FaUnlockAlt } from 'react-icons/fa';
 
 const serviceItems = [

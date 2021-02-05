@@ -7,7 +7,7 @@ import {
   CardMedia,
   Typography,
 } from "@material-ui/core";
-import CardListStyles from "../../styles/CardList.module.css";
+import CardListStyles from "../../styles/Cardlist.module.css";
 
 const CardItem = ({ title, description, image }) => {
   return (

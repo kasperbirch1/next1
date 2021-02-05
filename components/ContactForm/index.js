@@ -61,7 +61,7 @@ const ContactForm = () => {
         variant="outlined"
         fullWidth
       />
-      <Button type="submit" variant="outlined">
+      <Button fullWidth type="submit" variant="outlined">
         Submit
       </Button>
     </form>

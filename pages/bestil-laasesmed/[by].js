@@ -2,30 +2,8 @@ import Meta from "../../layout/Meta";
 import { siteInfo } from "../../siteInfo";
 import { Typography } from "@material-ui/core";
 
-const Product = ({ byNavn }) => {
-  console.log("🚀 ~ file: [by].js ~ line 6 ~ Product ~ byNavn", byNavn);
-
-  const extraCityInfo = [
-    {
-      name: "græsted",
-      extraSeo: "Her er der individuelt SEO om Græsted",
-      arrivalTime: 20,
-    },
-    {
-      name: "gentofte",
-      extraSeo: "Her er der individuelt SEO om Gentofte",
-      arrivalTime: 20,
-    },
-    {
-      name: "københavn",
-      extraSeo: "Her er der individuelt SEO om København",
-      arrivalTime: 20,
-    },
-  ];
-
-  const filterExtraCityInfo = extraCityInfo.filter(
-    (company) => company.name == byNavn.toLowerCase()
-  );
+const Product = ({ city }) => {
+  console.log("🚀 ~ file: [by].js ~ line 6 ~ Product ~ city", city);
 
   const CapitalizedFirstLetter = (name) => {
     if (typeof name !== "string") return "";
@@ -34,35 +12,33 @@ const Product = ({ byNavn }) => {
 
   return (
     <>
-      <Meta title={`| Bestil låsesmed til ${CapitalizedFirstLetter(byNavn)}`} />
+      <Meta
+        title={`| Bestil låsesmed til ${CapitalizedFirstLetter(city.name)}`}
+      />
       <article className="wrapper">
         <Typography
           variant="h1"
           align="center"
         >{`Bestil en låsesmed til ${CapitalizedFirstLetter(
-          byNavn
+          city.name
         )}`}</Typography>
-
-        {filterExtraCityInfo.length > 0 ? (
+        {city?.extraSeo ? (
           <>
             <div style={{ border: "1px solid red" }}>
-              <pre>{JSON.stringify(filterExtraCityInfo, null, 2)}</pre>
-              <Typography style={{ color: "red" }}>
-                {filterExtraCityInfo[0].extraSeo}
-              </Typography>
+              <Typography style={{ color: "red" }}>{city.extraSeo}</Typography>
             </div>
 
             <Typography
               variant="subtitle1"
               component="h2"
             >{`Står du akut og mangler du  en låsesmed i ${CapitalizedFirstLetter(
-              byNavn
+              city.name
             )} ring på ${siteInfo.phone}`}</Typography>
 
             <Typography>
               Står du akut og har brug for en låsesmed, kan du ringe på{" "}
               <strong>{siteInfo.phone}</strong>, så kommer vi så hurtig vi kan
-              til {CapitalizedFirstLetter(byNavn)}, og låser din dør op. Vi
+              til {CapitalizedFirstLetter(city.name)}, og låser din dør op. Vi
               løser alle opgaver, lige fra defekt nøgle og lås, til montering og
               omkodning, eller hvis simpelthen bare har fået smækket dig ude.
             </Typography>
@@ -71,23 +47,22 @@ const Product = ({ byNavn }) => {
               Er uheldet sket, og du har smækket dig ude af din bil, eller er
               din lås eller nøgle gået i stykker. Ring blot til vores
               døgntelefon, så kommer vi til dig - om det er på din adresse eller
-              andre steder i {CapitalizedFirstLetter(byNavn)} inden for 30
+              andre steder i {CapitalizedFirstLetter(city.name)} inden for 30
               minutter.
             </Typography>
           </>
         ) : (
           <Typography style={{ color: "red" }}>
-            Vi laver kun bestillings arbejde i {CapitalizedFirstLetter(byNavn)}
+            Vi laver kun bestillings arbejde i{" "}
+            {CapitalizedFirstLetter(city.name)}
           </Typography>
         )}
-
         <Typography>
           PB Låsesmed yder altid en professionel service, og bruger kun godkendt
           udstyr. Vi skader derfor ikke din lås, og du vil kunne bruge den samme
           nøgle som før. Har du derimod mistet din nøgle, kan vi borer låsen og
           udskifte den på stedet.
         </Typography>
-
         <Typography>
           Vi har mere end 20 års erfaring som låsesmed. Vi står altid til
           rådighed hvis du skulle have spørgsmål angående udskiftning, og
@@ -95,12 +70,16 @@ const Product = ({ byNavn }) => {
           bliver besvaret og behov bliver opfyldt
         </Typography>
       </article>
+      <pre>{JSON.stringify(city, null, 2)}</pre>
     </>
   );
 };
 Product.getInitialProps = async (ctx) => {
+  const res = await fetch(`http://localhost:3000/api/byer/${ctx.query.by}`);
+  const json = await res.json();
+
   return {
-    byNavn: ctx.query.by,
+    city: json,
   };
 };
 export default Product;

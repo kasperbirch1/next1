@@ -26,8 +26,8 @@ const priser = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {priceList.map((item) => (
-            <TableRow>
+          {priceList.map((item, index) => (
+            <TableRow key={index}>
               <TableCell align="left">{item.name}</TableCell>
               <TableCell>{item.description}</TableCell>
               <TableCell align="right">{`${item.price} kr.`}</TableCell>

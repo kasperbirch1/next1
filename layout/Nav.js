@@ -41,7 +41,7 @@ const Nav = () => {
   );
 };
 
-const MenuList = ({ addPhone, changeFlex }) => {
+export const MenuList = ({ addPhone, changeFlex, footer }) => {
   return (
     <ul
       className={changeFlex ? navStyles.changeFlexMenuList : navStyles.MenuList}

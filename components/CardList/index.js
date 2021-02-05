@@ -36,6 +36,7 @@ const CardList = () => {
       {serviceItems.map((element) => {
         return (
           <CardItem
+            key={element.name}
             title={element.name}
             description={element.description}
             image="https://images.unsplash.com/photo-1579728866437-6397f3d89ec3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1901&q=80"

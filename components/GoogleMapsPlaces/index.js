@@ -1,6 +1,7 @@
 /*global google*/
 import React from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
@@ -72,13 +73,9 @@ export default function App() {
             </div>
             <TextField {...getInputProps({ placeholder: "Type address" })} />
 
-            <a
-              href={`https://stupefied-hodgkin-d7ec40.netlify.app/bestil-laasesmed/${
-                address.split(",")[0]
-              }`}
-            >
-              a href
-            </a>
+            <Link href={`bestil-laasesmed/abe1`} as={`bestil-laasesmed/abe1`}>
+              <a>{address.split(",")[0]}</a>
+            </Link>
 
             <Button type="submit" variant="outlined" color="primary">
               Find Låsesmed

@@ -15,6 +15,7 @@
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-flickity-component": "^3.6.1"
+    "react-flickity-component": "^3.6.1",
+    "react-places-autocomplete": "^7.3.0"
   }
 }

@@ -1,4 +1,4 @@
-import SeachCity from "../../components/SeachCity";
+import GoogleMaps from "../../components/GoogleMapsPlaces";
 import Meta from "../../layout/Meta";
 
 const index = () => {
@@ -6,7 +6,7 @@ const index = () => {
     <>
       <Meta title="| Bestil Låsesmed" />
       <h1>Bestil en låsesmed</h1>
-      <SeachCity />
+      <GoogleMaps />
     </>
   );
 };

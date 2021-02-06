@@ -77,8 +77,11 @@ const Product = ({ city }) => {
 Product.getInitialProps = async (ctx) => {
   // const res = await fetch(`http://localhost:3000/api/byer/${ctx.query.by}`);
   const res = await fetch(
-    `https://stupefied-hodgkin-d7ec40.netlify.app/api/byer/${ctx.query.by}`
+    `https://next1-j55blld2z.vercel.app/api/byer/${ctx.query.by}`
   );
+  // const res = await fetch(
+  //   `https://stupefied-hodgkin-d7ec40.netlify.app/api/byer/${ctx.query.by}`
+  // );
   const json = await res.json();
 
   return {

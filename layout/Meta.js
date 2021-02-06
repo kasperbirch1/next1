@@ -9,6 +9,11 @@ const Meta = ({ title, keywords, description }) => {
       <meta charSet="utf-8" />
       <link rel="icon" href="/favicon.ico" />
       <title>{`PB Låsesmed ${title}`}</title>
+      <script
+        defer
+        type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg1FoFelKpnmBn_sx2GUZtA-SI6HCPMiU&libraries=places"
+      ></script>
     </Head>
   );
 };

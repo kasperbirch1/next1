@@ -5,7 +5,6 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
-import Head from "next/head";
 
 import { TextField, Typography, Button } from "@material-ui/core";
 
@@ -37,13 +36,6 @@ export default function App() {
 
   return (
     <>
-      <Head>
-        <script
-          defer
-          type="text/javascript"
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg1FoFelKpnmBn_sx2GUZtA-SI6HCPMiU&libraries=places"
-        ></script>
-      </Head>
       <PlacesAutocomplete
         value={address}
         onChange={setAddress}

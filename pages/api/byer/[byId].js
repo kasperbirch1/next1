@@ -6,7 +6,7 @@ import initMiddleware from "../../../lib/init-middleware";
 const cors = initMiddleware(
   // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
   Cors({
-    // Only allow requests with GET, POST and OPTIONS
+    // Only allow requests with GET // POST and OPTIONS
     methods: ["GET"],
   })
 );
@@ -21,8 +21,14 @@ export default async function handler(req, res) {
 
   // Rest of the API logic
   if (result.length > 0) {
-    res.status(200).json(result[0]);
+    res
+      .status(200)
+      .set({ "content-type": "application/json; charset=utf-8" })
+      .json(result[0]);
   } else {
-    res.status(200).json({ name: req.query.byId });
+    res
+      .status(200)
+      .set({ "content-type": "application/json; charset=utf-8" })
+      .json({ name: req.query.byId });
   }
 }

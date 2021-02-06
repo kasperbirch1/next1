@@ -19,6 +19,8 @@ export default async function handler(req, res) {
   // Run cors
   await cors(req, res);
 
+  res.set({ "content-type": "text/html; charset=utf-8" });
+
   // Rest of the API logic
   if (result.length > 0) {
     res.status(200).json(result[0]);

@@ -21,14 +21,8 @@ export default async function handler(req, res) {
 
   // Rest of the API logic
   if (result.length > 0) {
-    res
-      .status(200)
-      .set({ "content-type": "text/html; charset=utf-8" })
-      .json(result[0]);
+    res.status(200).json(result[0]);
   } else {
-    res
-      .status(200)
-      .set({ "content-type": "text/html; charset=utf-8" })
-      .json({ name: req.query.byId });
+    res.status(200).json({ name: req.query.byId });
   }
 }

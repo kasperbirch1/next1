@@ -10,6 +10,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
+    "cors": "^2.8.5",
     "emailjs-com": "^2.6.4",
     "flickity": "^2.2.2",
     "next": "10.0.5",

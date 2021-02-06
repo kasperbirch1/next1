@@ -24,11 +24,11 @@ export default async function handler(req, res) {
     res
       .status(200)
       .set({ "content-type": "application/json; charset=utf-8" })
-      .json(result[0]);
+      .body(result[0]);
   } else {
     res
       .status(200)
       .set({ "content-type": "application/json; charset=utf-8" })
-      .json({ name: req.query.byId });
+      .body({ name: req.query.byId });
   }
 }

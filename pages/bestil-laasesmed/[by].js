@@ -70,18 +70,18 @@ const Product = ({ city }) => {
           bliver besvaret og behov bliver opfyldt
         </Typography>
       </article>
-      <pre>{JSON.stringify(city, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(city, null, 2)}</pre> */}
     </>
   );
 };
 Product.getInitialProps = async (ctx) => {
   // const res = await fetch(`http://localhost:3000/api/byer/${ctx.query.by}`);
-  const res = await fetch(
-    `https://next1-j55blld2z.vercel.app/api/byer/${ctx.query.by}`
-  );
   // const res = await fetch(
-  //   `https://stupefied-hodgkin-d7ec40.netlify.app/api/byer/${ctx.query.by}`
+  //   `https://next1-j55blld2z.vercel.app/api/byer/${ctx.query.by}`
   // );
+  const res = await fetch(
+    `https://stupefied-hodgkin-d7ec40.netlify.app/api/byer/${ctx.query.by}`
+  );
   const json = await res.json();
 
   return {

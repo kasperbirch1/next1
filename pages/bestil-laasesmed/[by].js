@@ -12,6 +12,7 @@ const Product = ({ city }) => {
 
   return (
     <>
+      {alert("æøå")}
       <Meta
         title={`| Bestil låsesmed til ${CapitalizedFirstLetter(city.name)}`}
       />

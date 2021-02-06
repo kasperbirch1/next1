@@ -72,6 +72,14 @@ export default function App() {
             </div>
             <TextField {...getInputProps({ placeholder: "Type address" })} />
 
+            <a
+              href={`https://stupefied-hodgkin-d7ec40.netlify.app/bestil-laasesmed/${
+                address.split(",")[0]
+              }`}
+            >
+              a href
+            </a>
+
             <Button type="submit" variant="outlined" color="primary">
               Find Låsesmed
             </Button>

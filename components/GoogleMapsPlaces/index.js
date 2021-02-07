@@ -18,6 +18,7 @@ export default function App() {
   });
 
   const handleSelect = async (value) => {
+    console.log("🚀 ~ file: index.js ~ line 21 ~ handleSelect ~ value", value);
     const results = await geocodeByAddress(value);
     const latLng = await getLatLng(results[0]);
     setAddress(value.split(",")[0]);
@@ -25,9 +26,10 @@ export default function App() {
   };
 
   const searchOptions = {
-    location: new google.maps.LatLng(55.6760968, 12.5683372),
-    radius: 1000,
+    componentRestrictions: { country: ["dk"] },
     // types: ["address"],
+    // location: new google.maps.LatLng(56.0652, 12.2856),
+    // radius: 100,
   };
 
   const handleSubmit = (e) => {
@@ -38,6 +40,7 @@ export default function App() {
   return (
     <>
       <PlacesAutocomplete
+        highlightFirstSuggestion={true}
         value={address}
         onChange={setAddress}
         onSelect={handleSelect}
@@ -51,12 +54,13 @@ export default function App() {
             {/* <pre>{JSON.stringify(address, null, 2)}</pre> */}
             {/* <pre>Latitude: {coordinates.lat}</pre> */}
             {/* <pre>Longitude: {coordinates.lng}</pre> */}
+
             <div>
-              {loading ? <div>...loading</div> : null}
+              {loading ? <div>...søger</div> : null}
 
               {suggestions.map((suggestion) => {
                 const style = {
-                  backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                  backgroundColor: suggestion.active ? "#0070f3" : "#fff",
                 };
 
                 return (
@@ -70,7 +74,12 @@ export default function App() {
                 );
               })}
             </div>
-            <TextField {...getInputProps({ placeholder: "Type address" })} />
+            <TextField
+              {...getInputProps({
+                label: "Bestil Låsesmed til",
+                placeholder: "Skriv by eller sted her.",
+              })}
+            />
             <Button type="submit" variant="outlined" color="primary">
               Find Låsesmed
             </Button>

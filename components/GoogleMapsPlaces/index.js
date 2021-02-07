@@ -24,11 +24,11 @@ export default function App() {
     setCoordinates(latLng);
   };
 
-  // const searchOptions = {
-  //   location: new google.maps.LatLng(55.6760968, 12.5683372),
-  //   radius: 1000,
-  //   // types: ["address"],
-  // };
+  const searchOptions = {
+    location: new google.maps.LatLng(55.6760968, 12.5683372),
+    radius: 1000,
+    // types: ["address"],
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ export default function App() {
         value={address}
         onChange={setAddress}
         onSelect={handleSelect}
-        // searchOptions={searchOptions}
+        searchOptions={searchOptions}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <form
@@ -51,7 +51,6 @@ export default function App() {
             {/* <pre>{JSON.stringify(address, null, 2)}</pre> */}
             {/* <pre>Latitude: {coordinates.lat}</pre> */}
             {/* <pre>Longitude: {coordinates.lng}</pre> */}
-
             <div>
               {loading ? <div>...loading</div> : null}
 
@@ -72,7 +71,6 @@ export default function App() {
               })}
             </div>
             <TextField {...getInputProps({ placeholder: "Type address" })} />
-
             <Button type="submit" variant="outlined" color="primary">
               Find Låsesmed
             </Button>

@@ -1,8 +1,9 @@
 import Meta from "../../layout/Meta";
 import dynamic from "next/dynamic";
 
-const DynamicGoogleMaps = dynamic(() =>
-  import("../../components/GoogleMapsPlaces")
+const DynamicGoogleMaps = dynamic(
+  () => import("../../components/GoogleMapsPlaces"),
+  { ssr: false }
 );
 
 const index = () => {

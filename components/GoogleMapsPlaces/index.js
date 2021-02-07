@@ -73,10 +73,6 @@ export default function App() {
             </div>
             <TextField {...getInputProps({ placeholder: "Type address" })} />
 
-            <Link href={`bestil-laasesmed/abe1`} as={`bestil-laasesmed/abe1`}>
-              <a>{address.split(",")[0]}</a>
-            </Link>
-
             <Button type="submit" variant="outlined" color="primary">
               Find Låsesmed
             </Button>

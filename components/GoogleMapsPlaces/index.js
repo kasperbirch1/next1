@@ -1,7 +1,6 @@
 /*global google*/
 import React from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
@@ -24,11 +23,11 @@ export default function App() {
     setCoordinates(latLng);
   };
 
-  //   const searchOptions = {
-  //     location: new google.maps.LatLng(55.6760968, 12.5683372),
-  //     radius: 1000,
-  //     // types: ["address"],
-  //   };
+  const searchOptions = {
+    location: new google.maps.LatLng(55.6760968, 12.5683372),
+    radius: 1000,
+    // types: ["address"],
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,7 +40,7 @@ export default function App() {
         value={address}
         onChange={setAddress}
         onSelect={handleSelect}
-        // searchOptions={searchOptions}
+        searchOptions={searchOptions}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <form

@@ -60,7 +60,7 @@ export default function App() {
 
               {suggestions.map((suggestion) => {
                 const style = {
-                  backgroundColor: suggestion.active ? "#0070f3" : "#fff",
+                  color: suggestion.active ? "#0070f3" : "#fff",
                 };
 
                 return (

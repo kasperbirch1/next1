@@ -8,12 +8,19 @@ import {
   Typography,
 } from "@material-ui/core";
 import CardListStyles from "../../styles/Cardlist.module.css";
+import Image from "next/image";
 
 const CardItem = ({ title, description, image }) => {
   return (
     <Card className={CardListStyles.box}>
       <CardActionArea>
-        <CardMedia component="img" alt={title} src={image} title={title} />
+        <CardMedia
+          alt={title}
+          title={title}
+          style={{ position: "relative", height: "200px" }}
+        >
+          <Image src="/keys_01.jpeg" layout="fill" objectFit="fill" />
+        </CardMedia>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {title}

@@ -8,7 +8,7 @@ const Product = ({ city }) => {
   const ChangeCharacterAndCapitalizedFirstLetter = (name) => {
     // if (typeof name !== "string") return "";
     const adSpace = name.replace("-", " ");
-    const res = adSpace.replace(/Ae/g, "æ");
+    const res = adSpace.replace(/ae/g, "æ");
     const res2 = res.replace(/oe/g, "ø");
     const res3 = res2.replace(/aa/g, "å");
     return res3.charAt(0).toUpperCase() + res3.slice(1);

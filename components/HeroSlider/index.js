@@ -14,12 +14,12 @@ const HeroSlider = () => {
         <HeroSliderItem
           description1="Vi leverer altid professionel låseservice"
           description2="Hurtigt, sikkert og trygt"
-          backgroundImage="https://d2bgjx2gb489de.cloudfront.net/gbb-blogs/wp-content/uploads/2020/02/14125552/Copenhagen-wide-angle.jpg"
+          backgroundImage="/copenhagen_01.jpg"
         />
         <HeroSliderItem
           description1="Vi leverer altid professionel låseservice"
           description2="Hurtigt, sikkert og trygt"
-          backgroundImage="https://images.unsplash.com/photo-1590587181460-58b27c558712?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+          backgroundImage="/copenhagen_02.jpeg"
         />
       </Flickity>
     </>

@@ -2,10 +2,13 @@
   width: 100%;
   display: grid;
   place-content: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
   padding: 2rem;
+}
+
+.article img {
+  object-fit: cover;
+  z-index: -1;
 }
 
 .article__overlay {

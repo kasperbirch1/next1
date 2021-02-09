@@ -5,10 +5,10 @@ import { Typography } from "@material-ui/core";
 const Product = ({ city }) => {
   console.log("🚀 ~ file: [by].js ~ line 6 ~ Product ~ city", city);
 
-  const CapitalizedFirstLetter = (name) => {
-    if (typeof name !== "string") return "";
+  const ChangeCharacterAndCapitalizedFirstLetter = (name) => {
+    // if (typeof name !== "string") return "";
     const adSpace = name.replace("-", " ");
-    const res = adSpace.replace(/Ae/g, "Æ");
+    const res = adSpace.replace(/Ae/g, "æ");
     const res2 = res.replace(/oe/g, "ø");
     const res3 = res2.replace(/aa/g, "å");
     return res3.charAt(0).toUpperCase() + res3.slice(1);
@@ -17,13 +17,15 @@ const Product = ({ city }) => {
   return (
     <>
       <Meta
-        title={`| Bestil låsesmed til ${CapitalizedFirstLetter(city.name)}`}
+        title={`| Bestil låsesmed til ${ChangeCharacterAndCapitalizedFirstLetter(
+          city.name
+        )}`}
       />
       <article className="wrapper">
         <Typography
           variant="h1"
           align="center"
-        >{`Bestil en låsesmed til ${CapitalizedFirstLetter(
+        >{`Bestil en låsesmed til ${ChangeCharacterAndCapitalizedFirstLetter(
           city.name
         )}`}</Typography>
         {city?.extraSeo ? (
@@ -35,30 +37,32 @@ const Product = ({ city }) => {
             <Typography
               variant="subtitle1"
               component="h2"
-            >{`Står du akut og mangler du  en låsesmed i ${CapitalizedFirstLetter(
+            >{`Står du akut og mangler du  en låsesmed i ${ChangeCharacterAndCapitalizedFirstLetter(
               city.name
             )} ring på ${siteInfo.phone}`}</Typography>
 
             <Typography>
               Står du akut og har brug for en låsesmed, kan du ringe på{" "}
               <strong>{siteInfo.phone}</strong>, så kommer vi så hurtig vi kan
-              til {CapitalizedFirstLetter(city.name)}, og låser din dør op. Vi
-              løser alle opgaver, lige fra defekt nøgle og lås, til montering og
-              omkodning, eller hvis simpelthen bare har fået smækket dig ude.
+              til {ChangeCharacterAndCapitalizedFirstLetter(city.name)}, og
+              låser din dør op. Vi løser alle opgaver, lige fra defekt nøgle og
+              lås, til montering og omkodning, eller hvis simpelthen bare har
+              fået smækket dig ude.
             </Typography>
 
             <Typography>
               Er uheldet sket, og du har smækket dig ude af din bil, eller er
               din lås eller nøgle gået i stykker. Ring blot til vores
               døgntelefon, så kommer vi til dig - om det er på din adresse eller
-              andre steder i {CapitalizedFirstLetter(city.name)} inden for 30
+              andre steder i{" "}
+              {ChangeCharacterAndCapitalizedFirstLetter(city.name)} inden for 30
               minutter.
             </Typography>
           </>
         ) : (
           <Typography style={{ color: "red" }}>
             Vi laver kun bestillings arbejde i{" "}
-            {CapitalizedFirstLetter(city.name)}
+            {ChangeCharacterAndCapitalizedFirstLetter(city.name)}
           </Typography>
         )}
         <Typography>

@@ -31,17 +31,17 @@ export default function App() {
     // radius: 100,
   };
 
-  function kbSlug(string) {
+  function makeSlug(string) {
     const rmSpace = string.replace(" ", "-");
-    const res = rmSpace.replace(/Æ/g, "Ae");
-    const res2 = res.replace(/ø/g, "oe");
-    const res3 = res2.replace(/å/g, "aa");
-    return res3;
+    const res = rmSpace.replace(/æ/gi, "ae");
+    const res2 = res.replace(/ø/gi, "oe");
+    const res3 = res2.replace(/å/gi, "aa");
+    return res3.toLowerCase();
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    router.push(`bestil-laasesmed/${kbSlug(address.split(",")[0])}`);
+    router.push(`bestil-laasesmed/${makeSlug(address.split(",")[0])}`);
   };
 
   return (

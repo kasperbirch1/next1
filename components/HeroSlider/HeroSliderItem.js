@@ -1,10 +1,12 @@
 import React from "react";
 import HeroSliderStyles from "../../styles/HeroSlider.module.css";
-import Image from "next/image";
 
 const HeroSliderItem = ({ description1, description2, backgroundImage }) => {
   return (
-    <article className={HeroSliderStyles.article}>
+    <article
+      className={HeroSliderStyles.article}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       <div className={HeroSliderStyles.article__overlay}>
         <div>
           <h1 className={HeroSliderStyles.article__title}>
@@ -15,12 +17,6 @@ const HeroSliderItem = ({ description1, description2, backgroundImage }) => {
           </p>
         </div>
       </div>
-      <Image
-        src={backgroundImage}
-        layout="fill"
-        objectFit="cover"
-        priority="true"
-      />
     </article>
   );
 };

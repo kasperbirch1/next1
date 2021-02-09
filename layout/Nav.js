@@ -34,7 +34,7 @@ const Nav = () => {
 
       {togglemenu && (
         <div className={navStyles.destopMenuListContainer}>
-          <MenuList changeFlex />
+          <MenuList changeFlex setTogglemenu={setTogglemenu} />
         </div>
       )}
     </nav>

@@ -13,7 +13,14 @@
 }
 
 .changeFlexMenuList {
-  color: red;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.changeFlexMenuList li {
+  padding: 1rem;
 }
 
 .mobile {
@@ -32,6 +39,7 @@
     display: none;
   }
   .desktop {
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

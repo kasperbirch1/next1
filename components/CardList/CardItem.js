@@ -19,7 +19,12 @@ const CardItem = ({ title, description, image }) => {
           title={title}
           style={{ position: "relative", height: "200px" }}
         >
-          <Image src="/keys_01.jpeg" layout="fill" objectFit="fill" />
+          <Image
+            src="/keys_01.jpeg"
+            layout="fill"
+            objectFit="fill"
+            priority="true"
+          />
         </CardMedia>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

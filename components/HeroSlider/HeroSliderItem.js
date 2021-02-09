@@ -15,7 +15,12 @@ const HeroSliderItem = ({ description1, description2, backgroundImage }) => {
           </p>
         </div>
       </div>
-      <Image src={backgroundImage} layout="fill" objectFit="cover" />
+      <Image
+        src={backgroundImage}
+        layout="fill"
+        objectFit="cover"
+        priority="true"
+      />
     </article>
   );
 };

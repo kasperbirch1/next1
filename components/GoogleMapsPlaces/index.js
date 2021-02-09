@@ -6,7 +6,6 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-places-autocomplete";
-
 import { TextField, Typography, Button } from "@material-ui/core";
 
 export default function App() {
@@ -32,9 +31,17 @@ export default function App() {
     // radius: 100,
   };
 
+  function kbSlug(string) {
+    const rmSpace = string.replace(" ", "-");
+    const res = rmSpace.replace(/Æ/g, "Ae");
+    const res2 = res.replace(/ø/g, "oe");
+    const res3 = res2.replace(/å/g, "aa");
+    return res3;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    router.push(`bestil-laasesmed/${address.split(",")[0]}`);
+    router.push(`bestil-laasesmed/${kbSlug(address.split(",")[0])}`);
   };
 
   return (

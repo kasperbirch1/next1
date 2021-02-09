@@ -7,7 +7,11 @@ const Product = ({ city }) => {
 
   const CapitalizedFirstLetter = (name) => {
     if (typeof name !== "string") return "";
-    return name.charAt(0).toUpperCase() + name.slice(1);
+    const adSpace = name.replace("-", " ");
+    const res = adSpace.replace(/Ae/g, "Æ");
+    const res2 = res.replace(/oe/g, "ø");
+    const res3 = res2.replace(/aa/g, "å");
+    return res3.charAt(0).toUpperCase() + res3.slice(1);
   };
 
   return (

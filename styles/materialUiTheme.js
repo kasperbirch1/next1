@@ -13,8 +13,13 @@ export const theme = createMuiTheme({
     fontFamily:
       "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
     h1: {
-      fontSize: "3rem",
-      marginBottom: "1.5rem",
+      fontSize: "2.5rem",
+      marginBottom: ".5rem",
+      fontWeight: "500",
+    },
+    h2: {
+      fontSize: "2rem",
+      marginBottom: ".75rem",
     },
     subtitle1: {
       marginBottom: ".75rem",

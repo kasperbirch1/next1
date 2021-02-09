@@ -5,12 +5,11 @@ export default function Home() {
   return (
     <>
       <Typography variant="h1" align="center">
-        Velkommen til forsiden
+        Autoriserede låsesmed til privat og erhverv.
       </Typography>
-      <Typography variant="subtitle1" component="h2">
-        Her er der noget subinfo
+      <Typography variant="h2" align="center">
+        Vi kan løse alle opgaver hurtigt og professionelt.
       </Typography>
-
       <CardList />
     </>
   );

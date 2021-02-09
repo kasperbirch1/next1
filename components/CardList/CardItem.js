@@ -16,8 +16,13 @@ const CardItem = ({ title, description, image }) => {
         <CardMedia
           alt={title}
           title={title}
-          image="/keys_01.jpeg"
+          image={image}
           component="img"
+          style={{
+            maxHeight: "175px",
+            objectFit: "cover",
+            objectPosition: "50% 85%",
+          }}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

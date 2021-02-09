@@ -12,7 +12,7 @@ const priser = () => {
   return (
     <>
       <Meta title="| Prisliste" />
-      <Typography variant="h2">Prisliste</Typography>
+      <Typography variant="h1">Prisliste</Typography>
       <Table>
         <TableHead>
           <TableRow>

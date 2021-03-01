@@ -90,7 +90,7 @@ Product.getInitialProps = async (ctx) => {
   // );
 
   const res = await fetch(
-    `https://stupefied-hodgkin-d7ec40.netlify.app/api/byer/${ctx.query.by}`
+    `https://pb-laasesmed.dk/api/byer/${ctx.query.by}`
   );
 
   const json = await res.json();

@@ -31,13 +31,13 @@ const Product = ({ city }) => {
         )}`}</Typography>
         {city?.extraSeo ? (
           <>
-            <div style={{ border: "1px solid red" }}>
-              <Typography style={{ color: "red" }}>{city.extraSeo}</Typography>
-            </div>
+           <Typography  
+              variant="subtitle1"
+              component="h2">{city.extraSeo}</Typography>
 
             <Typography
               variant="subtitle1"
-              component="h2"
+              component="h3"
             >{`Står du akut og mangler du  en låsesmed i ${ChangeCharacterAndCapitalizedFirstLetter(
               city.name
             )} ring på ${siteInfo.phone}`}</Typography>
@@ -62,7 +62,9 @@ const Product = ({ city }) => {
           </>
         ) : (
           <>
-          <Typography style={{ color: "red" }}>
+          <Typography 
+           variant="subtitle1"
+           component="h3">
             {`Brug vores kontaktformular for låsearbejde i ${ChangeCharacterAndCapitalizedFirstLetter(city.name)}`}
           </Typography>
           <ContactForm/>

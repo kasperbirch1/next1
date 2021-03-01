@@ -60,10 +60,12 @@ const Product = ({ city }) => {
             </Typography>
           </>
         ) : (
+          <>
           <Typography style={{ color: "red" }}>
-            Vi laver kun bestillings arbejde i{" "}
-            {ChangeCharacterAndCapitalizedFirstLetter(city.name)}
+            {`Brug vores kontaktformular for låsearbejde i ${ChangeCharacterAndCapitalizedFirstLetter(city.name)}`}
           </Typography>
+          <ContactForm/>
+          </>
         )}
         <Typography>
           PB Låsesmed yder altid en professionel service, og bruger kun godkendt

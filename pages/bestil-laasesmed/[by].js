@@ -1,6 +1,7 @@
 import Meta from "../../layout/Meta";
 import { siteInfo } from "../../siteInfo";
 import { Typography } from "@material-ui/core";
+import ContactForm from "../../components/ContactForm";
 
 const Product = ({ city }) => {
   console.log("🚀 ~ file: [by].js ~ line 6 ~ Product ~ city", city);

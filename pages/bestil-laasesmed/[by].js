@@ -31,9 +31,9 @@ const Product = ({ city }) => {
         )}`}</Typography>
         {city?.extraSeo ? (
           <>
-           <Typography  
-              variant="subtitle1"
-              component="h2">{city.extraSeo}</Typography>
+            <Typography variant="subtitle1" component="h2">
+              {city.extraSeo}
+            </Typography>
 
             <Typography
               variant="subtitle1"
@@ -59,15 +59,28 @@ const Product = ({ city }) => {
               {ChangeCharacterAndCapitalizedFirstLetter(city.name)} inden for 30
               minutter.
             </Typography>
+
+            <Typography>
+              PB Låsesmed yder altid en professionel service, og bruger kun
+              godkendt udstyr. Vi skader derfor ikke din lås, og du vil kunne
+              bruge den samme nøgle som før. Har du derimod mistet din nøgle,
+              kan vi borer låsen og udskifte den på stedet.
+            </Typography>
+            <Typography>
+              Vi har mere end 20 års erfaring som låsesmed. Vi står altid til
+              rådighed hvis du skulle have spørgsmål angående udskiftning, og
+              reparation af låse - vi guider dig bedst muligt, så dine spørgsmål
+              bliver besvaret og behov bliver opfyldt
+            </Typography>
           </>
         ) : (
           <>
-          <Typography 
-           variant="subtitle1"
-           component="h3">
-            {`Brug vores kontaktformular for låsearbejde i ${ChangeCharacterAndCapitalizedFirstLetter(city.name)}`}
-          </Typography>
-          <ContactForm/>
+            <Typography variant="subtitle1" component="h3">
+              {`Brug vores kontaktformular for låsearbejde i ${ChangeCharacterAndCapitalizedFirstLetter(
+                city.name
+              )}`}
+            </Typography>
+            <ContactForm />
           </>
         )}
         <Typography>
@@ -94,9 +107,7 @@ Product.getInitialProps = async (ctx) => {
   //   `https://next1-j55blld2z.vercel.app/api/byer/${ctx.query.by}`
   // );
 
-  const res = await fetch(
-    `https://pb-laasesmed.dk/api/byer/${ctx.query.by}`
-  );
+  const res = await fetch(`https://pb-laasesmed.dk/api/byer/${ctx.query.by}`);
 
   const json = await res.json();
 

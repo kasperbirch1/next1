@@ -6,21 +6,6 @@
 
 .MenuList {
   list-style: none;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.changeFlexMenuList {
-  padding: 0.5rem 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-.changeFlexMenuList li {
-  padding: 1rem;
 }
 
 .mobile {
@@ -28,31 +13,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.desktop {
-  display: none;
-}
-
-@media screen and (min-width: 600px) {
-  .mobile {
-    display: none;
-  }
-  .desktop {
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.destopMenuListContainer {
-  /* position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  outline: 1px solid red;
-  z-index: 10000; */
 }

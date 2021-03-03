@@ -1,12 +1,24 @@
 import Link from "next/link";
-import navStyles from "../styles/Nav.module.css";
 import { Button } from "@material-ui/core";
 import PhoneIcon from "@material-ui/icons/Phone";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useState } from "react";
+import styled from 'styled-components';
 import Modal from "react-modal";
-
+import { WrapperContainer } from "../styles/Wrapper";
+import { SpaceBetweenCss } from "../styles/SpaceBetween";
 Modal.setAppElement(`#__next`);
+
+const StyledNav = styled.nav`
+  padding: 0.75rem 0;
+  background: #000;
+  color: #fff;
+`;
+
+const SpaceBetweenWrapper = styled(WrapperContainer)`
+  ${SpaceBetweenCss}
+`
+
 
 const modalStyles = {
   overlay: {
@@ -33,8 +45,8 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={navStyles.nav}>
-        <div className={`wrapper ${navStyles.mobile}`}>
+      <StyledNav>
+        <SpaceBetweenWrapper>
           <Button
             onClick={() => {
               setModalOpen(true);
@@ -54,8 +66,8 @@ const Nav = () => {
               31 31 35 15
             </Button>
           </a>
-        </div>
-      </nav>
+        </SpaceBetweenWrapper>
+      </StyledNav>
       <Modal
         isOpen={modalOpen}
         onRequestClose={closeModal}
@@ -79,9 +91,13 @@ const Nav = () => {
   );
 };
 
+const StyleMenuListUl = styled.ul`
+  list-style: none;
+`
+
 export const MenuList = ({ addPhone }) => {
   return (
-    <ul className={navStyles.MenuList}>
+    <StyleMenuListUl>
       <li>
         <Link href="/">Forside</Link>
       </li>
@@ -107,7 +123,7 @@ export const MenuList = ({ addPhone }) => {
           </a>
         </li>
       )}
-    </ul>
+    </StyleMenuListUl>
   );
 };
 

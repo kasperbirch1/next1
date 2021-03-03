@@ -4,10 +4,6 @@ import { Typography } from "@material-ui/core";
 import ContactForm from "../../components/ContactForm";
 import styled from 'styled-components';
 
-const Title = styled.h1`
-  color: red;
-`;
-
 const Product = ({ city }) => {
   console.log("🚀 ~ file: [by].js ~ line 6 ~ Product ~ city", city);
 

@@ -24,7 +24,6 @@ const Product = ({ city }) => {
         )}`}
       />
       <article className="wrapper">
-      <Title>Hej Title</Title>
         <Typography
           variant="h1"
           align="center"

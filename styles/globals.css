@@ -40,10 +40,12 @@ a:active {
   text-decoration: underline;
 }
 
+/* cleanup */
 .wrapper {
   margin: 0 auto;
   max-width: 800px;
 }
+/* cleanup */
 
 .flickity-enabled:focus {
   outline: none;
@@ -55,7 +57,7 @@ a:active {
 
 .ReactModal__Overlay {
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .ReactModal__Overlay--after-open {
@@ -68,7 +70,7 @@ a:active {
 
 .ReactModal__Content {
   transform: translateX(100vh);
-  transition: transform 300ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 
 .ReactModal__Content--after-open {

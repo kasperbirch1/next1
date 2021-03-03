@@ -9,17 +9,6 @@ import { WrapperContainer } from "../styles/Wrapper";
 import { SpaceBetweenCss } from "../styles/SpaceBetween";
 Modal.setAppElement(`#__next`);
 
-const StyledNav = styled.nav`
-  padding: 0.75rem 0;
-  background: #000;
-  color: #fff;
-`;
-
-const SpaceBetweenWrapper = styled(WrapperContainer)`
-  ${SpaceBetweenCss}
-`
-
-
 const modalStyles = {
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -36,6 +25,21 @@ const modalStyles = {
     inset: "0px",
   },
 };
+
+const StyledNav = styled.nav`
+  padding: 0.75rem 0;
+  background: #000;
+  color: #fff;
+
+`;
+
+const SpaceBetweenWrapper = styled(WrapperContainer)`
+  ${SpaceBetweenCss}
+`
+
+const StyledMenuListUl = styled.ul`
+  list-style: none;
+`
 
 const Nav = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -68,13 +72,14 @@ const Nav = () => {
           </a>
         </SpaceBetweenWrapper>
       </StyledNav>
+
       <Modal
         isOpen={modalOpen}
         onRequestClose={closeModal}
         style={modalStyles}
         closeTimeoutMS={500}
       >
-        <p
+        <span
           onClick={closeModal}
           style={{
             fontSize: "1.5rem",
@@ -84,20 +89,19 @@ const Nav = () => {
           }}
         >
           Close
-        </p>
-        <MenuList />
+        </span>
+        <StyledMenuListUl>
+          <MenuList />
+        </StyledMenuListUl>
       </Modal>
     </>
   );
 };
 
-const StyleMenuListUl = styled.ul`
-  list-style: none;
-`
 
-export const MenuList = ({ addPhone }) => {
-  return (
-    <StyleMenuListUl>
+
+export const MenuList = () =>  (
+    <>
       <li>
         <Link href="/">Forside</Link>
       </li>
@@ -110,21 +114,8 @@ export const MenuList = ({ addPhone }) => {
       <li>
         <Link href="/kontakt-os">Kontakt Os</Link>
       </li>
-      {addPhone && (
-        <li>
-          <a href="tel:+4531313515">
-            <Button
-              variant="contained"
-              startIcon={<PhoneIcon />}
-              color="primary"
-            >
-              31 31 35 15
-            </Button>
-          </a>
-        </li>
-      )}
-    </StyleMenuListUl>
+    </>
   );
-};
+
 
 export default Nav;

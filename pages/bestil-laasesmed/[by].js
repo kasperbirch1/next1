@@ -2,6 +2,11 @@ import Meta from "../../layout/Meta";
 import { siteInfo } from "../../siteInfo";
 import { Typography } from "@material-ui/core";
 import ContactForm from "../../components/ContactForm";
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  color: red;
+`;
 
 const Product = ({ city }) => {
   console.log("🚀 ~ file: [by].js ~ line 6 ~ Product ~ city", city);
@@ -23,6 +28,7 @@ const Product = ({ city }) => {
         )}`}
       />
       <article className="wrapper">
+      <Title>Hej Title</Title>
         <Typography
           variant="h1"
           align="center"

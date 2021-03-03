@@ -1,12 +1,12 @@
-import Link from "next/link";
 import { Button } from "@material-ui/core";
 import PhoneIcon from "@material-ui/icons/Phone";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useState } from "react";
 import styled from 'styled-components';
 import Modal from "react-modal";
-import { WrapperContainer } from "../styles/Wrapper";
-import { SpaceBetweenCss } from "../styles/SpaceBetween";
+import { WrapperContainer } from "../../styles/Wrapper";
+import { SpaceBetweenCss } from "../../styles/SpaceBetween";
+import { MenuList } from "../../content/MenuList";
 Modal.setAppElement(`#__next`);
 
 const modalStyles = {
@@ -98,24 +98,6 @@ const Nav = () => {
   );
 };
 
-
-
-export const MenuList = () =>  (
-    <>
-      <li>
-        <Link href="/">Forside</Link>
-      </li>
-      <li>
-        <Link href="/priser">Prisliste</Link>
-      </li>
-      <li>
-        <Link href="/bestil-laasesmed">Bestil Låsesmed</Link>
-      </li>
-      <li>
-        <Link href="/kontakt-os">Kontakt Os</Link>
-      </li>
-    </>
-  );
 
 
 export default Nav;

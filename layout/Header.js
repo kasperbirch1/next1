@@ -1,5 +1,5 @@
 // import HeroSlider from "../components/HeroSlider";
-import Nav from "./Nav";
+import Nav from "../components/Nav";
 import dynamic from "next/dynamic";
 
 const DynamicHeroSlider = dynamic(() => import("../components/HeroSlider"), {

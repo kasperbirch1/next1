@@ -65,6 +65,8 @@ const Nav = () => {
     },
   };
 
+  const testF = () => alert("hej");
+
   return (
     <>
       <StyledNav>
@@ -111,7 +113,7 @@ const Nav = () => {
           }}
         />
         <MobileMenu>
-          <MenuList />
+          <MenuList closeModal={closeModal} />
         </MobileMenu>
       </Modal>
     </>

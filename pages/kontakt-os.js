@@ -1,5 +1,5 @@
 import ContactForm from "../components/ContactForm";
-import Meta from "../layout/Meta";
+import Meta from "../components/layout/Meta";
 
 const KontaktOs = () => {
   return (

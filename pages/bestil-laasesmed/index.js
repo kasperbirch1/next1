@@ -1,4 +1,4 @@
-import Meta from "../../layout/Meta";
+import Meta from "../../components/layout/Meta";
 import dynamic from "next/dynamic";
 
 const DynamicGoogleMaps = dynamic(

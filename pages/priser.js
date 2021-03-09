@@ -6,7 +6,7 @@ import {
   TableRow,
   Typography,
 } from "@material-ui/core";
-import Meta from "../layout/Meta";
+import Meta from "../components/layout/Meta";
 
 const priser = () => {
   return (

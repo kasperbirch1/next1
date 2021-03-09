@@ -1,17 +1,19 @@
 // import HeroSlider from "../components/HeroSlider";
-import Nav from "../components/Nav";
+import Nav from "../../components/Nav";
 import dynamic from "next/dynamic";
 
-const DynamicHeroSlider = dynamic(() => import("../components/HeroSlider"), {
+const DynamicHeroSlider = dynamic(() => import("../../components/HeroSlider"), {
   ssr: false,
 });
 
 const Header = () => {
   return (
-    <header>
-      <Nav />
+    <>
+      <header>
+        <Nav />
+      </header>
       <DynamicHeroSlider />
-    </header>
+    </>
   );
 };
 

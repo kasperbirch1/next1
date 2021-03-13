@@ -1,23 +1,63 @@
 import React from "react";
-import HeroSliderStyles from "../../styles/HeroSlider.module.css";
+import { breakpoints } from "../../styles/breakpoints";
+import styled from "styled-components";
+const StyledHeroSliderItem = styled.article`
+  width: 100%;
+  display: grid;
+  place-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  position: relative;
+  .overlay {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 0.25rem;
+    display: grid;
+    place-content: center;
+  }
+
+  .title,
+  .description {
+    text-align: center;
+  }
+
+  .title {
+    line-height: 1.15;
+    font-size: 2rem;
+    @media ${breakpoints.sm} {
+      font-size: 3rem;
+    }
+    span {
+      color: #0070f3;
+    }
+  }
+  .description {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    @media ${breakpoints.sm} {
+      font-size: 2.5rem;
+    }
+  }
+`;
 
 const HeroSliderItem = ({ description1, description2, backgroundImage }) => {
   return (
-    <article
-      className={HeroSliderStyles.article}
+    <StyledHeroSliderItem
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className={HeroSliderStyles.article__overlay}>
+      <div className="overlay">
         <div>
-          <h3 className={HeroSliderStyles.article__title}>
+          <h3 className="title">
             <span>PB</span> Låsesmed
           </h3>
-          <p className={HeroSliderStyles.article__description}>
+          <p className="description">
             {description1} <br /> {description2}
           </p>
         </div>
       </div>
-    </article>
+    </StyledHeroSliderItem>
   );
 };
 

@@ -1,5 +1,7 @@
 import React from "react";
 import { breakpoints } from "../../styles/breakpoints";
+import Image from "next/image";
+
 import styled from "styled-components";
 const StyledHeroSliderItem = styled.article`
   width: 100%;
@@ -11,6 +13,7 @@ const StyledHeroSliderItem = styled.article`
   padding: 2rem;
   position: relative;
   .overlay {
+    z-index: 100;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 2rem;
     border-radius: 0.25rem;
@@ -44,9 +47,8 @@ const StyledHeroSliderItem = styled.article`
 
 const HeroSliderItem = ({ description1, description2, backgroundImage }) => {
   return (
-    <StyledHeroSliderItem
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <StyledHeroSliderItem>
+      <Image src={backgroundImage} layout="fill" objectFit="cover" />
       <div className="overlay">
         <div>
           <h3 className="title">

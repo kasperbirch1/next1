@@ -5,7 +5,7 @@ import renderToString from "next-mdx-remote/render-to-string";
 import Link from "next/link";
 import path from "path";
 import Image from "next/image";
-import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
+import { postFilePaths, POSTS_PATH } from "../../lib/mdxUtils";
 
 const components = {};
 

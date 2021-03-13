@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import Link from "next/link";
 import path from "path";
 import CardItem from "../components/CardItem";
-import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
+import { postFilePaths, POSTS_PATH } from "../lib/mdxUtils";
 import { Typography } from "@material-ui/core";
 
 import styled from "styled-components";

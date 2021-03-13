@@ -1,6 +1,7 @@
 import React from "react";
 import CardItem from "./CardItem";
 import { serviceItems } from "../../content/serviceItems";
+
 import styled from "styled-components";
 const StyledCardListSection = styled.section`
   display: grid;

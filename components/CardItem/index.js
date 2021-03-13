@@ -13,9 +13,9 @@ const CardItem = ({ title, description, image }) => {
         <Image
           src={image}
           alt={title}
-          layout="responsive"
-          width={200}
-          height={100}
+          layout="intrinsic"
+          width={400}
+          height={200}
           objectFit="cover"
           objectPosition="50% 85%"
           quality="25"

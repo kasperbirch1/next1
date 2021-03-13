@@ -1,27 +1,23 @@
 import {
-  Button,
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
-  CardMedia,
   Typography,
 } from "@material-ui/core";
+import Image from "next/image";
 
 const CardItem = ({ title, description, image }) => {
   return (
-    <Card >
+    <Card>
       <CardActionArea>
-        <CardMedia
+        <Image
+          src={image}
           alt={title}
-          title={title}
-          image={image}
-          component="img"
-          style={{
-            maxHeight: "175px",
-            objectFit: "cover",
-            objectPosition: "50% 85%",
-          }}
+          layout="responsive"
+          width={200}
+          height={100}
+          objectFit="cover"
+          objectPosition="50% 85%"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

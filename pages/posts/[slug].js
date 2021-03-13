@@ -19,7 +19,9 @@ export default function PostPage({ source, frontMatter }) {
         alt={frontMatter.title}
         layout="responsive"
         width={900}
-        height={500}
+        height={400}
+        objectFit="cover"
+        objectPosition="50% 85%"
       />
       <p>{frontMatter.description}</p>
       <section>{content}</section>

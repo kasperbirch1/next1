@@ -38,11 +38,11 @@ ul {
   list-style: none;
 }
 
-a:hover,
+/* a:hover,
 a:focus,
 a:active {
   text-decoration: underline;
-}
+} */
 
 /* cleanup */
 .wrapper {

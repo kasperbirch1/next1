@@ -2,7 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import path from "path";
-import CardItem from "../components/CardList/CardItem";
+import CardItem from "../components/CardItem";
 import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 import { Typography } from "@material-ui/core";
 
@@ -14,7 +14,6 @@ const StyledCardListUl = styled.ul`
 `;
 
 const index = ({ posts }) => {
-  console.log("🚀 ~ file: index.js ~ line 9 ~ index ~ posts", posts);
   return (
     <>
       <Typography variant="h1" align="center">

@@ -4,6 +4,7 @@ import hydrate from "next-mdx-remote/hydrate";
 import renderToString from "next-mdx-remote/render-to-string";
 import Link from "next/link";
 import path from "path";
+import Image from "next/image";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 
 const components = {};
@@ -13,6 +14,13 @@ export default function PostPage({ source, frontMatter }) {
   return (
     <>
       <h1>{frontMatter.title}</h1>
+      <Image
+        src={frontMatter.image}
+        alt={frontMatter.title}
+        layout="responsive"
+        width={900}
+        height={500}
+      />
       <p>{frontMatter.description}</p>
       <section>{content}</section>
       <Link href="/">

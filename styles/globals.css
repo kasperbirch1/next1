@@ -34,15 +34,20 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-}
-
 /* a:hover,
 a:focus,
 a:active {
   text-decoration: underline;
 } */
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
 
 /* cleanup */
 .wrapper {

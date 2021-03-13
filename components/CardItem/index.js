@@ -14,11 +14,11 @@ const CardItem = ({ title, description, image }) => {
           src={image}
           alt={title}
           layout="intrinsic"
-          width={400}
-          height={200}
+          width={550}
+          height={250}
           objectFit="cover"
           objectPosition="50% 85%"
-          quality="25"
+          quality="0"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

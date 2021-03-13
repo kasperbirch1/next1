@@ -48,7 +48,12 @@ const StyledHeroSliderItem = styled.article`
 const HeroSliderItem = ({ description1, description2, backgroundImage }) => {
   return (
     <StyledHeroSliderItem>
-      <Image src={backgroundImage} layout="fill" objectFit="cover" />
+      <Image
+        src={backgroundImage}
+        layout="fill"
+        objectFit="cover"
+        alt="Københavs Låsesmed"
+      />
       <div className="overlay">
         <div>
           <h3 className="title">
